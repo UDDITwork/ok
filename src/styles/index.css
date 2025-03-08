@@ -1,0 +1,161 @@
+:root {
+    /* Color scheme based on Claude AI interface */
+    --color-background: #ffffff;
+    --color-primary: #5436DA;
+    --color-primary-light: #EAE6FE;
+    --color-secondary: #ECECF1;
+    --color-text-primary: #111111;
+    --color-text-secondary: #6E6E80;
+    --color-border: #E5E5E5;
+    --color-user-message: #F7F7F8;
+    --color-assistant-message: #ffffff;
+    --color-hover: #F9F9F9;
+    --color-active: #EAEAEA;
+    --color-sidebar-bg: #F7F7F8;
+    --color-button-primary: #5436DA;
+    --color-button-hover: #4A2FC9;
+    --color-button-active: #3C259F;
+    --color-input-bg: #ffffff;
+    --color-input-border: #ECECF1;
+    
+    /* Typography */
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    
+    /* Spacing */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-xxl: 3rem;
+    
+    /* Border radius */
+    --border-radius-sm: 0.25rem;
+    --border-radius-md: 0.5rem;
+    --border-radius-lg: 0.75rem;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.05);
+    
+    /* Transitions */
+    --transition-fast: 0.1s ease;
+    --transition-normal: 0.2s ease;
+    --transition-slow: 0.3s ease;
+    
+    /* Layout */
+    --sidebar-width: 280px;
+    --header-height: 60px;
+    --footer-height: 80px;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    font-family: var(--font-family);
+    font-size: var(--font-size-md);
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  #root {
+    height: 100%;
+  }
+  
+  /* General button styles */
+  button {
+    font-family: var(--font-family);
+    font-size: var(--font-size-md);
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    transition: background-color var(--transition-fast), color var(--transition-fast);
+  }
+  
+  button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  /* Primary button */
+  .button-primary {
+    background-color: var(--color-button-primary);
+    color: white;
+  }
+  
+  .button-primary:hover:not(:disabled) {
+    background-color: var(--color-button-hover);
+  }
+  
+  .button-primary:active:not(:disabled) {
+    background-color: var(--color-button-active);
+  }
+  
+  /* Secondary button */
+  .button-secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-text-primary);
+  }
+  
+  .button-secondary:hover:not(:disabled) {
+    background-color: var(--color-hover);
+  }
+  
+  .button-secondary:active:not(:disabled) {
+    background-color: var(--color-active);
+  }
+  
+  /* Icon button */
+  .button-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border-radius: 50%;
+    color: var(--color-text-secondary);
+  }
+  
+  .button-icon:hover:not(:disabled) {
+    background-color: var(--color-hover);
+    color: var(--color-text-primary);
+  }
+  
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.2);
+  }
+  

@@ -1,0 +1,117 @@
+.message-bubble {
+    display: flex;
+    padding: var(--spacing-lg) var(--spacing-xl);
+    gap: var(--spacing-md);
+    transition: background-color var(--transition-fast);
+  }
+  
+  .user-message {
+    background-color: var(--color-user-message);
+  }
+  
+  .assistant-message {
+    background-color: var(--color-assistant-message);
+  }
+  
+  .message-bubble:hover {
+    background-color: var(--color-hover);
+  }
+  
+  .message-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: rgb(231, 219, 219);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .user-message .message-avatar {
+    background-color: var(--color-secondary);
+    color: var(--color-text-primary);
+  }
+  
+  .message-content {
+    flex: 1;
+  }
+  
+  .message-sender {
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+  
+  .message-time {
+    font-weight: 400;
+    font-size: var(--font-size-xs);
+    color: var(--color-text-secondary);
+  }
+  
+  .message-text {
+    line-height: 1.6;
+    color: var(--color-text-primary);
+  }
+  
+  .message-text p {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .message-text p:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Code blocks styling */
+  .message-text pre {
+    background-color: #4a0718;
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-md);
+    overflow-x: auto;
+    margin: var(--spacing-md) 0;
+  }
+  
+  .message-text code {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 0.9em;
+    background-color: #003b75;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+  }
+  
+  .message-text pre code {
+    background-color: transparent;
+    padding: 0;
+  }
+  
+  /* Lists */
+  .message-text ul, .message-text ol {
+    margin: var(--spacing-md) 0;
+    padding-left: var(--spacing-xl);
+  }
+  
+  .message-text li {
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  /* Blockquotes */
+  .message-text blockquote {
+    border-left: 4px solid var(--color-primary-light);
+    padding-left: var(--spacing-md);
+    color: var(--color-text-secondary);
+    margin: var(--spacing-md) 0;
+  }
+  
+  /* Links */
+  .message-text a {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+  
+  .message-text a:hover {
+    text-decoration: underline;
+  }
+  
